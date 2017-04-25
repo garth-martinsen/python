@@ -11,7 +11,7 @@ def hello():
 
 @route('/display')
 def grid():
-    return static_file('grid.html', root= '/Users/garth/TryRitzman/python')
+    return static_file('grid.html', root= '/Users/garth/TryRitzman/python3/conferenceDirectory')
 
 @route('/hello/<name>')
 def views(name='Garth'):
@@ -19,7 +19,7 @@ def views(name='Garth'):
 
 @route('/views/<img>')
 def server_static(img):
-     return static_file(img, root='/Users/garth/TryRitzman/python/views')
+     return static_file(img, root='/Users/garth/TryRitzman/python3/conferenceDirectory/views')
 
 run(host='192.168.1.10',port=8080,debug=True)    
 
