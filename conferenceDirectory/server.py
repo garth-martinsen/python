@@ -5,13 +5,13 @@ TEMPLATE_PATH.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 
 
 
 @route('/')
+@route('/display')
+def grid():
+    return static_file('grid.html', root= '/Users/garth/TryRitzman/python/conferenceDirectory')
+
 @route('/hello')
 def hello():
     return "Hello Bottle World!"
-
-@route('/display')
-def grid():
-    return static_file('grid.html', root= '/Users/garth/TryRitzman/python3/conferenceDirectory')
 
 @route('/hello/<name>')
 def views(name='Garth'):
@@ -19,7 +19,7 @@ def views(name='Garth'):
 
 @route('/views/<img>')
 def server_static(img):
-     return static_file(img, root='/Users/garth/TryRitzman/python3/conferenceDirectory/views')
+     return static_file(img, root='/Users/garth/TryRitzman/python/conferenceDirectory/views')
 
 run(host='192.168.1.10',port=8080,debug=True)    
 

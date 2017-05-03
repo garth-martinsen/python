@@ -3,14 +3,17 @@ To use it, edit the grid.html file to change the Conference name  eg: Leggo Expo
 If needed edit the locations: eg: change Room 1 to Area 1 etc.
 exit the grid.html edit session.
 copy 9 jpg imgs into the views directory and name them imgx.jpg where x= 1,2,...9
-Determine your server ip address by using: ifconfig | grep inet perhaps: 192.168.1.7
+In a Terminal window:
+   Determine your server ip address by using: ifconfig | grep inet  (results in something like: 192.168.1.7 ...)
+   Determine the absolute path to the project root dir: do a 'pwd" in the directory with grid.html (something like: /Users/garth/Programming/Python/python3/ritzman )
 Edit the server.py file and:
     modify the root parameter to point to your paths.(in a terminal navigate to your project and do a 'pwd" in the directory with grid.html and in the views dir.) 
 ...        return static_file('grid.html', root= '<yourPath>')
 ...        return static_file(img, root='<yourPath>/views')
 
-    modify the following line to have your ip address:
-                run(host='<yourIpAddress>',port=8080,debug=True)   
-Start the webserver by entering python3 server.py in the project root directory ( where server.py exists).
-On any connected device with a browser, enter http://<server ip address>:8080/display 
-You should see the 9 imgs displayed with their locations.
+    modify the following line to have your server ip address:
+...        run(host='serverIpAddress>',port=8080,debug=True)   
+Exit editing server.py. 
+Start the webserver by entering 'python3 server.py' in the project root directory ( where server.py exists).
+On any connected device with a browser, enter http://<serverIpAddress>:8080/display 
+You should see the conference title,  9 imgs displayed with their locations as you have edited them.
