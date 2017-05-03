@@ -7,7 +7,7 @@ In a Terminal window:
    Determine your server ip address by using: ifconfig | grep inet  (results in something like: 192.168.1.7 ...)
    Determine the absolute path to the project root dir: do a 'pwd" in the directory with grid.html (something like: /Users/garth/Programming/Python/python3/ritzman )
 Edit the server.py file and:
-    modify the root parameter to point to your paths.(in a terminal navigate to your project and do a 'pwd" in the directory with grid.html and in the views dir.) 
+    modify the root parameter to point to your paths in the following lines: 
 ...        return static_file('grid.html', root= '<yourPath>')
 ...        return static_file(img, root='<yourPath>/views')
 
